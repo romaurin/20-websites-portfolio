@@ -1,0 +1,65 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Боты для Telegram, Discord, WhatsApp — портфолио</title><link rel="stylesheet" href="../_alive/alive.css"><style>
+:root{--accent:#229ed9;--bg:#ebe6da;--fg:#15130f;--mut:#6b655a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--al-serif)}a{color:inherit}button{font:inherit}
+.wrap{width:min(1280px,calc(100% - 48px));margin:auto}
+.top{display:flex;justify-content:space-between;padding:22px 0;font:500 12px var(--al-mono);letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--fg)}
+h1{font-size:clamp(50px,9vw,140px);line-height:.92;margin:64px 0 18px}h1 em{color:var(--accent)}
+.lead{max-width:640px;color:var(--mut);margin:0 0 40px}.tabs{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:34px;font:600 12px var(--al-mono);letter-spacing:.1em;text-transform:uppercase}.tabs button{background:none;border:0;border-bottom:1px solid transparent;padding:4px 0;cursor:pointer;opacity:.5;color:inherit}.tabs button.on,.tabs button:hover{opacity:1;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px 40px;border-top:2px solid var(--fg);padding-top:50px}
+.card h3{font:500 30px/1.1 var(--al-serif);margin:22px 0 4px;letter-spacing:-.02em}.card p{margin:0 0 12px;color:var(--mut);font-size:15px}
+.hd2{font:500 11px var(--al-mono);letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+.lk{display:flex;gap:18px;font:600 12px var(--al-mono);letter-spacing:.06em;text-transform:uppercase}.lk a{border-bottom:1px solid var(--fg);text-decoration:none;padding-bottom:2px}.lk a:hover{color:var(--accent);border-color:var(--accent)}
+.code{margin:70px 0 0;border:1px solid var(--fg);padding:26px;font:13px/1.7 var(--al-mono)}.code b{font-family:var(--al-serif);font-size:24px;font-weight:500;display:block;margin-bottom:8px}
+footer{padding:36px 0 60px;font:500 12px var(--al-mono);color:var(--mut)}
+/* телефон */
+.ph{width:320px;height:560px;margin:auto;border:9px solid #15130f;border-radius:38px;overflow:hidden;display:flex;flex-direction:column;background:#cfdcc3;box-shadow:10px 10px 0 #15130f26;font:14px/1.38 system-ui,-apple-system,"Segoe UI",sans-serif}
+.hd{display:flex;align-items:center;gap:10px;background:#fff;padding:26px 14px 10px;border-bottom:1px solid #0001}
+.hd i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:700 16px system-ui;font-style:normal}.hd div{flex:1;display:flex;flex-direction:column;line-height:1.2}.hd b{font-size:15px;color:#111}.hd span{font-size:12px;color:#8a9aa6}
+.rs{border:0;background:none;font-size:20px;color:#8a9aa6;cursor:pointer}
+.ms{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:5px;background:radial-gradient(circle at 20% 10%,#e2ecd7,#cbd9be);scrollbar-width:none}.ms::-webkit-scrollbar{display:none}
+.m{max-width:86%;padding:7px 10px 5px;border-radius:14px;color:#111;word-wrap:break-word;animation:pop .25s ease-out}@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.96)}}
+.m small{display:block;text-align:right;font-size:10.5px;opacity:.5;margin-top:1px}
+.m.b{background:#fff;align-self:flex-start;border-bottom-left-radius:4px}.m.u{background:#e3f6c8;align-self:flex-end;border-bottom-right-radius:4px}
+.ty{display:flex;gap:4px;padding:11px 14px}.ty span{width:6px;height:6px;border-radius:50%;background:#8a9aa6;animation:bl 1s infinite}.ty span:nth-child(2){animation-delay:.15s}.ty span:nth-child(3){animation-delay:.3s}@keyframes bl{50%{opacity:.25}}
+.kb{display:flex;flex-direction:column;gap:4px;max-width:86%;align-self:flex-start;width:86%;animation:pop .25s ease-out}
+.kb button{border:0;border-radius:9px;padding:9px 8px;background:#4b6d8a99;color:#fff;font:500 13.5px system-ui,sans-serif;cursor:pointer;transition:.15s}.kb button:hover:not(:disabled){background:#3b5d7acc}.kb button:disabled{cursor:default}.kb button.sel{background:#4b6d8add}
+.in{background:#fff;padding:12px 16px;color:#98a6b0;font-size:14px;border-top:1px solid #0001}
+
+.ph.dc{background:#313338}.dc .hd{background:#1e1f22;border-color:#0004}.dc .hd b{color:#fff}.dc .hd span,.dc .rs{color:#949ba4}.dc .hd i{border-radius:12px}
+.dc .ms{background:#313338;gap:8px}.dc .in{background:#383a40;color:#6d6f78;border-radius:8px;margin:0 10px 12px;padding:10px 14px;border:0}
+.dc .m.b,.dc .m.u{max-width:100%;align-self:stretch;background:none;color:#dbdee1;border-radius:0;padding:0 2px 0 46px;position:relative}.dc .m small{display:none}
+.av{position:absolute;left:2px;top:2px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 15px system-ui;font-style:normal;color:#fff}.av.u{background:#5c5f66}
+.nm{display:flex;gap:6px;align-items:center;line-height:1.2}.nm b{color:#fff;font-size:14px}.nm i{font-style:normal;background:#5865f2;color:#fff;font:700 9px system-ui;padding:2px 4px;border-radius:3px}.nm span{color:#949ba4;font-size:11px}
+.emb{margin-top:5px;background:#2b2d31;border-left:4px solid var(--c);border-radius:4px;padding:8px 12px;font-size:13.5px;color:#dbdee1}.emb strong{display:block;color:#fff;margin-bottom:3px}.tx{margin-top:2px}
+.dc .kb{flex-direction:row;flex-wrap:wrap;width:100%;max-width:100%;padding-left:46px;gap:6px}.dc .kb button{background:#4e5058!important;border-radius:4px;padding:7px 13px;font-size:13px}.dc .kb button:first-child{background:#5865f2!important}.dc .kb button:disabled{opacity:.5}.dc .kb button.sel{outline:2px solid #fff3}
+.dc .ty{padding:0 0 0 46px}.dc .ty span{background:#949ba4}
+.wa .hd{background:#008069;border:0}.wa .hd b,.wa .hd span,.wa .rs{color:#fff}.wa .hd span{opacity:.8}
+.wa .ms{background:#efeae2}.wa .m.b{box-shadow:0 1px 1px #0002;border-radius:8px;border-top-left-radius:0}.wa .m.u{background:#d9fdd3;box-shadow:0 1px 1px #0002;border-radius:8px;border-top-right-radius:0}.wa .m.u small{color:#53bdeb;opacity:1}
+.wa .kb{gap:3px;width:82%}.wa .kb button{background:#fff!important;color:#027eb5;border-radius:8px;box-shadow:0 1px 1px #0002;padding:10px}.wa .kb button.sel{background:#e5f3f9!important}.wa .in{background:#f0f2f5;border:0}
+.full .al-dot,.full .al-prog,.full .tabs,.full .lead{display:none}.card[hidden]{display:none}
+.full .ph{height:760px}.full .top,.full h1,.full .lead,.full .code,.full footer{display:none}
+@media(max-width:980px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:680px){.grid{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="top"><a href="../index.html">← Все 20 сайтов</a><span>Боты / 13</span></div>
+<h1>Тринадцать ботов. <em>Три платформы.</em></h1>
+<p class="lead">Нажимайте на кнопки в телефонах — это интерактивные демо. Для каждой платформы свой вид: карточки Discord, быстрые ответы WhatsApp, инлайн-кнопки Telegram. Сценарии из этих же файлов запускаются как настоящие боты.</p>
+<div class="tabs"><button class="on" data-p="">Все · 13</button><button data-p="tg">Telegram · 6</button><button data-p="dc">Discord · 4</button><button data-p="wa">WhatsApp · 3</button></div><div class="grid" id="grid"></div>
+<div class="code"><b>Как запустить настоящего бота</b>1. Telegram: создайте бота у @BotFather и получите токен.<br>2. <code>pip install -r code/requirements.txt</code><br>3. <code>BOT_TOKEN=ваш_токен python code/bot.py nova</code> — Telegram (nova, basil, cura, pulse, altair, signal)<br>&nbsp;&nbsp;&nbsp;<code>python code/discord_bot.py dc-pixel</code> — Discord · <code>python code/whatsapp_webhook.py wa-nomad</code> — WhatsApp (нужен Meta Business)<br>Тексты и кнопки лежат в <code>code/scripts.json</code> — меняйте под свой бизнес.</div>
+<footer>Скриншоты: папка bots/screens · Диалоги — демонстрационные, оплата и заказы не подключены</footer></div>
+<script src="scripts.js"></script><script src="../_alive/alive.js"></script>
+<script>(()=>{const full=/full=1/.test(location.search);if(full)document.documentElement.classList.add('full');
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\n/g,'<br>');
+function mount(b,host){const P=b.p,ini=b.name[0],sub={tg:'бот',dc:'Приложение',wa:'в сети'}[P],ph={tg:'Сообщение',dc:'Написать в #чат',wa:'Сообщение'}[P];
+host.innerHTML=`<div class="ph ${P}" id="ph-${b.id}"><div class="hd"><i style="background:${b.color};color:${b.dark?'#111':'#fff'}">${ini}</i><div><b>${b.name}</b><span>${sub}</span></div><button class="rs" title="Начать заново">↺</button></div><div class="ms"></div><div class="in">${ph}</div></div>`;
+const ms=host.querySelector('.ms');let n=0,pi=0,ty=null;const tm=()=>'12:'+(40+n++);
+const add=(c,h)=>{const e=document.createElement('div');e.className='m '+c;e.innerHTML=h;ms.append(e);ms.scrollTop=ms.scrollHeight;return e};
+const uh=(l,t)=>P==='dc'?`<em class="av u">В</em><div class="nm"><b>Вы</b><span>${t}</span></div><div class="tx">${esc(l)}</div>`:esc(l)+`<small>${t}${P==='wa'?' ✓✓':''}</small>`;
+const bh=(s,t)=>{if(P!=='dc')return esc(s.t)+`<small>${t}</small>`;const [h,...r]=s.t.split('\n');return `<em class="av" style="background:${b.color};color:${b.dark?'#111':'#fff'}">${ini}</em><div class="nm"><b>${b.name}</b><i>APP</i><span>Сегодня, ${t}</span></div><div class="emb" style="--c:${b.color}">${r.length?`<strong>${esc(h)}</strong>${esc(r.join('\n'))}`:esc(h)}</div>`};
+function user(l,nx){add('u',uh(l,tm()));bot(nx)}
+function bot(id){const s=b.steps[id];const go=()=>{if(ty){ty.remove();ty=null}add('b',bh(s,tm()));
+if(s.b){const k=document.createElement('div');k.className='kb';s.b.forEach(([l,nx])=>{const x=document.createElement('button');x.textContent=l;x.onclick=()=>{k.querySelectorAll('button').forEach(z=>z.disabled=true);x.classList.add('sel');user(l,nx)};k.append(x)});ms.append(k);ms.scrollTop=ms.scrollHeight;if(full&&pi<b.path.length)k.children[b.path[pi++]].click()}};
+if(full)go();else{ty=add('b ty','<span></span><span></span><span></span>');setTimeout(go,700)}}
+host.querySelector('.rs').onclick=()=>{ms.innerHTML='';n=0;pi=0;ty=null;user('/start','start')};user('/start','start')}
+const names={tg:'Telegram',dc:'Discord',wa:'WhatsApp'},g=document.getElementById('grid');
+BOTS.forEach(b=>{const a=document.createElement('article');a.className='card';a.dataset.p=b.p;a.innerHTML=`<div class="host"></div><h3>${b.name}</h3><div class="hd2">${names[b.p]} · ${b.handle.split(' · ').pop()}</div><p>${b.desc}</p><div class="lk"><a href="../${b.site}/index.html">Сайт проекта ↗</a><a href="screens/${b.id}.png" download>Скриншот ↓</a></div>`;g.append(a);mount(b,a.querySelector('.host'))});
+document.querySelectorAll('.tabs button').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.querySelectorAll('.card').forEach(c=>c.hidden=t.dataset.p&&c.dataset.p!==t.dataset.p)})})()</script></body></html>

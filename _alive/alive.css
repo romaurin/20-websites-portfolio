@@ -1,0 +1,36 @@
+:root{--al-serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--al-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+html{scroll-padding-top:84px}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.07;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.al-prog{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--al,#111);z-index:9999}
+.al-dot{position:fixed;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:9998;transition:width .25s,height .25s,margin .25s}
+.al-dot.big{width:54px;height:54px;margin:-27px 0 0 -27px}
+.al-rip{position:fixed;width:90px;height:90px;margin:-45px 0 0 -45px;border:1px solid var(--al,#111);border-radius:50%;pointer-events:none;z-index:9997;animation:alrip .6s ease-out forwards}
+@keyframes alrip{from{transform:scale(.1);opacity:1}to{transform:scale(1);opacity:0}}
+.al-tag{position:fixed;z-index:9999;pointer-events:none;background:var(--al,#111);color:var(--alt,#fff);padding:11px 16px 12px;font:600 11px/1.2 var(--al-mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:5px 5px 0 #111;max-width:250px;clip-path:polygon(0 0,100% 0,100% 100%,14px 100%,0 calc(100% - 14px));opacity:0;transform-origin:0 100%;animation:altag 2.4s cubic-bezier(.2,1.2,.3,1) forwards}
+.al-tag b{display:block;margin-top:6px;font:500 32px/1 var(--al-serif);letter-spacing:-.02em;text-transform:none}
+@keyframes altag{0%{opacity:0;transform:translate(0,-60%) rotate(-5deg) scale(.7)}12%{opacity:1;transform:translate(0,-115%) rotate(-2deg) scale(1)}82%{opacity:1;transform:translate(0,-125%) rotate(-2deg)}100%{opacity:0;transform:translate(0,-150%) rotate(-2deg)}}
+.al-r{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.al-r.in{opacity:1;transform:none}
+.al-w{display:inline-block;opacity:0;transform:translateY(.5em);animation:alw .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*70ms + .1s)}
+@keyframes alw{to{opacity:1;transform:none}}
+h1,h2{font-family:var(--al-serif)!important;font-weight:500!important;letter-spacing:-.035em!important}
+.tag,.chip,small{font-family:var(--al-mono)}
+.price{font-family:var(--al-mono);font-weight:700}
+.button,.navbtn,.chip,.product,.product img,.contact form,input,select{border-radius:2px!important}
+.button,.navbtn{transition:transform .25s,box-shadow .25s}
+.button:hover,.navbtn:hover{box-shadow:4px 4px 0 var(--fg,#111)}
+.product{cursor:pointer;position:relative;transition:transform .25s,box-shadow .25s!important}
+.product:hover{transform:translate(-4px,-4px)!important;box-shadow:7px 7px 0 var(--al,#111)}
+.product img{transition:transform .9s cubic-bezier(.2,.7,.2,1);filter:saturate(.9)}
+.product:hover img{transform:scale(1.06);filter:none}
+.product:hover .price{color:var(--al)}
+.product::after{content:'нажми — цена';position:absolute;top:0;left:0;z-index:3;background:var(--fg,#111);color:var(--bg,#fff);font:600 10px/1 var(--al-mono);letter-spacing:.12em;text-transform:uppercase;padding:8px 11px;transform:translateY(-100%);transition:.25s;pointer-events:none}
+.product:hover::after{transform:none}
+.al-nw{position:sticky!important;top:0;z-index:50;width:100%!important;max-width:none!important;margin:0!important;padding-inline:max(16px,calc((100% - 1200px)/2))!important;background:color-mix(in srgb,var(--bg,#fff) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+.al-nw.al-st{border-color:color-mix(in srgb,var(--fg,#111) 18%,transparent)}
+.links a{position:relative}
+.links a::after{content:'';position:absolute;left:0;right:0;bottom:-7px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:0 50%;transition:transform .3s}
+.links a.act::after,.links a:hover::after{transform:scaleX(1)}
+@media(max-width:520px){.product::after{display:none}}
+:focus-visible{outline:2px solid var(--al,#111);outline-offset:3px}
+.al-skip{position:fixed;left:12px;top:-60px;z-index:10000;background:var(--fg,#111);color:var(--bg,#fff);padding:10px 14px;font:600 12px var(--al-mono);transition:top .2s}.al-skip:focus{top:12px}
